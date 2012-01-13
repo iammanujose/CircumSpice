@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEA7B42214BC201C0023D10E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B42114BC201C0023D10E /* UIKit.framework */; };
+		CEA7B42414BC201C0023D10E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B42314BC201C0023D10E /* Foundation.framework */; };
+		CEA7B42614BC201C0023D10E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B42514BC201C0023D10E /* CoreGraphics.framework */; };
+		CEA7B42C14BC201C0023D10E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B42A14BC201C0023D10E /* InfoPlist.strings */; };
+		CEA7B42E14BC201C0023D10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B42D14BC201C0023D10E /* main.m */; };
+		CEA7B43214BC201C0023D10E /* circumSpiceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B43114BC201C0023D10E /* circumSpiceAppDelegate.m */; };
+		CEA7B43714BC201D0023D10E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B43614BC201D0023D10E /* first.png */; };
+		CEA7B43914BC201D0023D10E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B43814BC201D0023D10E /* first@2x.png */; };
+		CEA7B43E14BC201D0023D10E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B43D14BC201D0023D10E /* second.png */; };
+		CEA7B44014BC201D0023D10E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B43F14BC201D0023D10E /* second@2x.png */; };
+		CEA7B44D14BC23E00023D10E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B44C14BC23E00023D10E /* icon.png */; };
+		CEA7B45314BC252C0023D10E /* circumSpiceMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B45114BC252C0023D10E /* circumSpiceMapViewController.m */; };
+		CEA7B45414BC252C0023D10E /* circumSpiceMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B45214BC252C0023D10E /* circumSpiceMapViewController.xib */; };
+		CEA7B45814BC26730023D10E /* circumSpiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B45614BC26730023D10E /* circumSpiceListViewController.m */; };
+		CEA7B45914BC26730023D10E /* circumSpiceListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B45714BC26730023D10E /* circumSpiceListViewController.xib */; };
+		CEA7B45D14BC27090023D10E /* circumSpiceSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B45B14BC27090023D10E /* circumSpiceSettingsViewController.m */; };
+		CEA7B45E14BC27090023D10E /* circumSpiceSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B45C14BC27090023D10E /* circumSpiceSettingsViewController.xib */; };
+		CEA7B46014BC311E0023D10E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B45F14BC311E0023D10E /* MapKit.framework */; };
+		CEA7B46314BC31FD0023D10E /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B46114BC31FD0023D10E /* libsqlite3.0.dylib */; };
+		CEA7B46414BC31FD0023D10E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B46214BC31FD0023D10E /* libsqlite3.dylib */; };
+		CEA7B46614BC33900023D10E /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B46514BC33900023D10E /* flag.png */; };
+		CEA7B46814BC33A20023D10E /* Flag3Right.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B46714BC33A10023D10E /* Flag3Right.png */; };
+		CEA7B47414BC63A20023D10E /* circumSpiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B47214BC63A20023D10E /* circumSpiceDetailViewController.m */; };
+		CEA7B47514BC63A20023D10E /* circumSpiceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B47314BC63A20023D10E /* circumSpiceDetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CEA7B41D14BC201C0023D10E /* CircumSpice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircumSpice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA7B42114BC201C0023D10E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CEA7B42314BC201C0023D10E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEA7B42514BC201C0023D10E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CEA7B42914BC201C0023D10E /* CircumSpice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircumSpice-Info.plist"; sourceTree = "<group>"; };
+		CEA7B42B14BC201C0023D10E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEA7B42D14BC201C0023D10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEA7B42F14BC201C0023D10E /* CircumSpice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircumSpice-Prefix.pch"; sourceTree = "<group>"; };
+		CEA7B43014BC201C0023D10E /* circumSpiceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circumSpiceAppDelegate.h; sourceTree = "<group>"; };
+		CEA7B43114BC201C0023D10E /* circumSpiceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = circumSpiceAppDelegate.m; sourceTree = "<group>"; };
+		CEA7B43614BC201D0023D10E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		CEA7B43814BC201D0023D10E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		CEA7B43D14BC201D0023D10E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		CEA7B43F14BC201D0023D10E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		CEA7B44C14BC23E00023D10E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CEA7B44E14BC23F00023D10E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		CEA7B45014BC252C0023D10E /* circumSpiceMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circumSpiceMapViewController.h; sourceTree = "<group>"; };
+		CEA7B45114BC252C0023D10E /* circumSpiceMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circumSpiceMapViewController.m; sourceTree = "<group>"; };
+		CEA7B45214BC252C0023D10E /* circumSpiceMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circumSpiceMapViewController.xib; sourceTree = "<group>"; };
+		CEA7B45514BC26730023D10E /* circumSpiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circumSpiceListViewController.h; sourceTree = "<group>"; };
+		CEA7B45614BC26730023D10E /* circumSpiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circumSpiceListViewController.m; sourceTree = "<group>"; };
+		CEA7B45714BC26730023D10E /* circumSpiceListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circumSpiceListViewController.xib; sourceTree = "<group>"; };
+		CEA7B45A14BC27090023D10E /* circumSpiceSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circumSpiceSettingsViewController.h; sourceTree = "<group>"; };
+		CEA7B45B14BC27090023D10E /* circumSpiceSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circumSpiceSettingsViewController.m; sourceTree = "<group>"; };
+		CEA7B45C14BC27090023D10E /* circumSpiceSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circumSpiceSettingsViewController.xib; sourceTree = "<group>"; };
+		CEA7B45F14BC311E0023D10E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CEA7B46114BC31FD0023D10E /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		CEA7B46214BC31FD0023D10E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CEA7B46514BC33900023D10E /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		CEA7B46714BC33A10023D10E /* Flag3Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flag3Right.png; sourceTree = "<group>"; };
+		CEA7B47114BC63A10023D10E /* circumSpiceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circumSpiceDetailViewController.h; sourceTree = "<group>"; };
+		CEA7B47214BC63A20023D10E /* circumSpiceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circumSpiceDetailViewController.m; sourceTree = "<group>"; };
+		CEA7B47314BC63A20023D10E /* circumSpiceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = circumSpiceDetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA7B41A14BC201C0023D10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA7B46314BC31FD0023D10E /* libsqlite3.0.dylib in Frameworks */,
+				CEA7B46414BC31FD0023D10E /* libsqlite3.dylib in Frameworks */,
+				CEA7B46014BC311E0023D10E /* MapKit.framework in Frameworks */,
+				CEA7B42214BC201C0023D10E /* UIKit.framework in Frameworks */,
+				CEA7B42414BC201C0023D10E /* Foundation.framework in Frameworks */,
+				CEA7B42614BC201C0023D10E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA7B41214BC201C0023D10E = {
+			isa = PBXGroup;
+			children = (
+				CEA7B42714BC201C0023D10E /* CircumSpice */,
+				CEA7B42014BC201C0023D10E /* Frameworks */,
+				CEA7B41E14BC201C0023D10E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA7B41E14BC201C0023D10E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7B41D14BC201C0023D10E /* CircumSpice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA7B42014BC201C0023D10E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7B46114BC31FD0023D10E /* libsqlite3.0.dylib */,
+				CEA7B46214BC31FD0023D10E /* libsqlite3.dylib */,
+				CEA7B45F14BC311E0023D10E /* MapKit.framework */,
+				CEA7B42114BC201C0023D10E /* UIKit.framework */,
+				CEA7B42314BC201C0023D10E /* Foundation.framework */,
+				CEA7B42514BC201C0023D10E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEA7B42714BC201C0023D10E /* CircumSpice */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7B43014BC201C0023D10E /* circumSpiceAppDelegate.h */,
+				CEA7B43114BC201C0023D10E /* circumSpiceAppDelegate.m */,
+				CEA7B45014BC252C0023D10E /* circumSpiceMapViewController.h */,
+				CEA7B45114BC252C0023D10E /* circumSpiceMapViewController.m */,
+				CEA7B45214BC252C0023D10E /* circumSpiceMapViewController.xib */,
+				CEA7B45514BC26730023D10E /* circumSpiceListViewController.h */,
+				CEA7B45614BC26730023D10E /* circumSpiceListViewController.m */,
+				CEA7B45714BC26730023D10E /* circumSpiceListViewController.xib */,
+				CEA7B45A14BC27090023D10E /* circumSpiceSettingsViewController.h */,
+				CEA7B45B14BC27090023D10E /* circumSpiceSettingsViewController.m */,
+				CEA7B45C14BC27090023D10E /* circumSpiceSettingsViewController.xib */,
+				CEA7B47114BC63A10023D10E /* circumSpiceDetailViewController.h */,
+				CEA7B47214BC63A20023D10E /* circumSpiceDetailViewController.m */,
+				CEA7B47314BC63A20023D10E /* circumSpiceDetailViewController.xib */,
+				CEA7B42814BC201C0023D10E /* Supporting Files */,
+			);
+			path = CircumSpice;
+			sourceTree = "<group>";
+		};
+		CEA7B42814BC201C0023D10E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7B42914BC201C0023D10E /* CircumSpice-Info.plist */,
+				CEA7B44C14BC23E00023D10E /* icon.png */,
+				CEA7B46514BC33900023D10E /* flag.png */,
+				CEA7B43814BC201D0023D10E /* first@2x.png */,
+				CEA7B44E14BC23F00023D10E /* icon.png */,
+				CEA7B43F14BC201D0023D10E /* second@2x.png */,
+				CEA7B43614BC201D0023D10E /* first.png */,
+				CEA7B46714BC33A10023D10E /* Flag3Right.png */,
+				CEA7B43D14BC201D0023D10E /* second.png */,
+				CEA7B42A14BC201C0023D10E /* InfoPlist.strings */,
+				CEA7B42D14BC201C0023D10E /* main.m */,
+				CEA7B42F14BC201C0023D10E /* CircumSpice-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEA7B41C14BC201C0023D10E /* CircumSpice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA7B44914BC201D0023D10E /* Build configuration list for PBXNativeTarget "CircumSpice" */;
+			buildPhases = (
+				CEA7B41914BC201C0023D10E /* Sources */,
+				CEA7B41A14BC201C0023D10E /* Frameworks */,
+				CEA7B41B14BC201C0023D10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircumSpice;
+			productName = CircumSpice;
+			productReference = CEA7B41D14BC201C0023D10E /* CircumSpice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA7B41414BC201C0023D10E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CEA7B41714BC201C0023D10E /* Build configuration list for PBXProject "CircumSpice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEA7B41214BC201C0023D10E;
+			productRefGroup = CEA7B41E14BC201C0023D10E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA7B41C14BC201C0023D10E /* CircumSpice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEA7B41B14BC201C0023D10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA7B42C14BC201C0023D10E /* InfoPlist.strings in Resources */,
+				CEA7B43714BC201D0023D10E /* first.png in Resources */,
+				CEA7B43914BC201D0023D10E /* first@2x.png in Resources */,
+				CEA7B43E14BC201D0023D10E /* second.png in Resources */,
+				CEA7B44014BC201D0023D10E /* second@2x.png in Resources */,
+				CEA7B44D14BC23E00023D10E /* icon.png in Resources */,
+				CEA7B45414BC252C0023D10E /* circumSpiceMapViewController.xib in Resources */,
+				CEA7B45914BC26730023D10E /* circumSpiceListViewController.xib in Resources */,
+				CEA7B45E14BC27090023D10E /* circumSpiceSettingsViewController.xib in Resources */,
+				CEA7B46614BC33900023D10E /* flag.png in Resources */,
+				CEA7B46814BC33A20023D10E /* Flag3Right.png in Resources */,
+				CEA7B47514BC63A20023D10E /* circumSpiceDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA7B41914BC201C0023D10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA7B42E14BC201C0023D10E /* main.m in Sources */,
+				CEA7B43214BC201C0023D10E /* circumSpiceAppDelegate.m in Sources */,
+				CEA7B45314BC252C0023D10E /* circumSpiceMapViewController.m in Sources */,
+				CEA7B45814BC26730023D10E /* circumSpiceListViewController.m in Sources */,
+				CEA7B45D14BC27090023D10E /* circumSpiceSettingsViewController.m in Sources */,
+				CEA7B47414BC63A20023D10E /* circumSpiceDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEA7B42A14BC201C0023D10E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA7B42B14BC201C0023D10E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEA7B44714BC201D0023D10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEA7B44814BC201D0023D10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEA7B44A14BC201D0023D10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircumSpice/CircumSpice-Prefix.pch";
+				INFOPLIST_FILE = "CircumSpice/CircumSpice-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEA7B44B14BC201D0023D10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircumSpice/CircumSpice-Prefix.pch";
+				INFOPLIST_FILE = "CircumSpice/CircumSpice-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA7B41714BC201C0023D10E /* Build configuration list for PBXProject "CircumSpice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA7B44714BC201D0023D10E /* Debug */,
+				CEA7B44814BC201D0023D10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA7B44914BC201D0023D10E /* Build configuration list for PBXNativeTarget "CircumSpice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA7B44A14BC201D0023D10E /* Debug */,
+				CEA7B44B14BC201D0023D10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEA7B41414BC201C0023D10E /* Project object */;
+}
