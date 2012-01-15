@@ -13,6 +13,7 @@
 #import "circumSpiceSettingsViewController.h"
 
 static NSMutableArray *spotName, *spotVicinity, *spotLongitude, *spotLatitude, *spotType;
+static NSMutableArray *categoryCount;
 static int cnt,tagid;;
 @implementation circumSpiceMapViewController
 @synthesize mapview;
@@ -21,8 +22,10 @@ static int cnt,tagid;;
 
 @synthesize viewController4=_viewController4;
 
--(void) xmlparser:(double)longi:(double)lati:(double)radius:(NSString *)condition
+-(void) xmlparser:(double)longi:(double)lati:(double)radius:(NSString *)condition:(NSInteger)categoryNumber
 {
+    //int i;
+    index1=0;
     NSLog(@"xml parser");
     NSString *urls=[[NSString alloc]initWithFormat:@"https://maps.googleapis.com/maps/api/place/search/xml?location=%f,%f&radius=%f&name=%@&sensor=false&key=AIzaSyBNa8_9X2uUQh7y1ee85w1jbltBOK_kOE0",longi,lati,radius,condition];
     NSURL *url = [[NSURL alloc] initWithString:urls];
@@ -33,7 +36,11 @@ static int cnt,tagid;;
     if(!success)
         
         NSLog(@"Error Error Error!!!");
+    countNumber[categoryNumber]=counts;
+    
+  
     // Do any additional setup after loading the view, typically from a nib.
+    
     
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,7 +53,6 @@ static int cnt,tagid;;
     return self;
 }
 
-
 - (MKAnnotationView *)mapView:(MKMapView *)mv viewForAnnotation:(id <MKAnnotation>)annotation      {
     
     MKAnnotationView *pinView = (MKAnnotationView *)[mapview dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
@@ -58,33 +64,16 @@ static int cnt,tagid;;
         
         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"] ;
         
-        pinView.image = [UIImage imageNamed:@"Flag3Right.png"];
+        pinView.image = [UIImage imageNamed:@"gpspolice.png"];
         
         pinView.frame = CGRectMake(-20, 0, 40, 40); 
         
               
         pinView.canShowCallout = YES;
       
-        int i;
-        NSLog(@"anotaion title %@",[annotation title]);
-        NSLog(@"name array %@",name);
-        for(i=0;i<[name count];i++)        {
-           
-       
-            if([[annotation title] isEqualToString:[name objectAtIndex:i]])
-            {
-                tagid=i;
-               NSLog(@"in if%d %@",i,[annotation title]);
-             
-            }
-         
-            
-        }
   
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        rightButton.tag=tagid;        
-                
-       // NSLog(@"rojil%d",rightButton.tag);
+       
         pinView.rightCalloutAccessoryView = rightButton;
            
         
@@ -233,7 +222,8 @@ static int cnt,tagid;;
                    // NSLog(@"field%@",field);
                    //NSLog(@"in if----1");  
                                            
-                  [self xmlparser:10.2633:76.3491:2000:@"school"];  
+                  [self xmlparser:10.2633:76.3491:2000:@"school":i];
+                    
                }
                
                
@@ -241,46 +231,34 @@ static int cnt,tagid;;
                
                {
                   //NSLog(@"in if----2");
-                  [self xmlparser:10.2633:76.3491:2000:@"atm"]; 
+                  [self xmlparser:10.2633:76.3491:2000:@"atm":i]; 
                }
                if(field == 1 && i==2)
                {
                    //NSLog(@"in if----3");
-                   [self xmlparser:10.2633:76.3491:2000:@"hospital"];
+                   [self xmlparser:10.2633:76.3491:2000:@"hospital":i];
                    
                }
                if(field == 1 && i==3)
                {
                    //NSLog(@"in if----4");
-                 [self xmlparser:10.2633:76.3491:2000:@"post"];
+                 [self xmlparser:10.2633:76.3491:2000:@"post":i];
                       
                }
                    if(field == 1 && i==4)
                    {
-                       [self xmlparser:10.2633:76.3491:2000:@"bank"];
+                       [self xmlparser:10.105768:76.353264:2000:@"bank":i];
                        //NSLog(@"in if----5");
                    }
                    if(field == 1 && i==5)
                    {
-                       [self xmlparser:10.2633:76.3491:2000:@"bar"];
+                       [self xmlparser:10.2633:76.3491:2000:@"bar":i];
                      //  NSLog(@"in if----6");
                    }
-//                   if(field==0 &&  )
-//                   {
-//                       [self xmlparser:10.2633:76.3491:5000:@""];
-//                   }
-                   
-           // NSLog(@"value of i%d",i);   
+
            
             }   
-           // 
-           // [self xmlparser:10.2633:76.3491:5000:@"post"];
-           // [self xmlparser:10.2633:76.3491:5000:@"bank"];
-           // [self xmlparser:10.2633:76.3491:5000:@"bar"];
-           // [self xmlparser:10.2633:76.3491:5000:@"bar"];
            
-              
-           //} 
             
         } 
         
@@ -312,6 +290,8 @@ static int cnt,tagid;;
     spotType = [[NSMutableArray alloc] init];
     spotLongitude = [[NSMutableArray alloc] init];
     spotLatitude = [[NSMutableArray alloc] init];
+    categoryCount=[[NSMutableArray alloc]init];
+    reference=[[NSMutableArray alloc]init];
     NSLog(@"nsmutable alloc init for array");
     [self.view addSubview:activityIndicator];
     
@@ -370,20 +350,34 @@ static int cnt,tagid;;
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    NSLog(@"%d",[control tag]);
-    NSLog(@"%d",tagid);
-    NSLog(@"annotation click");
+    int i;
+    MKPointAnnotation *annot=(MKPointAnnotation *)view.annotation;
+    NSLog(@"///////%@",[annot title]);
+    for(i=0;i<[name count];i++)        {
+        
+        
+        if([[annot title] isEqualToString:[name objectAtIndex:i]])
+        {
+            tagid=i;
+            //NSLog(@"--->%d---->%@",i,[sender title]);
+            
+        }
+        
+        
+    }
+    
+
     circumSpiceDetailViewController *viewController4 = [[circumSpiceDetailViewController alloc] initWithNibName:@"circumSpiceDetailViewController" bundle:nil];
     
     [self.navigationController pushViewController:viewController4 animated:YES]; 
     NSLog(@"calling objects of list view by annotaion click");
     NSLog(@"spot name in callout %@",spotName);
-    [viewController4 stringName:[spotName objectAtIndex:[control tag]] :[control tag]];
-    [viewController4 stringVicinity:[spotVicinity objectAtIndex:[control tag ]]:[control tag ]];
+    [viewController4 stringName:[spotName objectAtIndex:tagid] :tagid];
+    [viewController4 stringVicinity:[spotVicinity objectAtIndex:tagid]:tagid];
     
-    [viewController4 stringLatitude:[spotLatitude objectAtIndex:[control tag ]]:[control tag ]];
-    [viewController4 stringLongitude:[spotLongitude objectAtIndex:[control tag ]]:[control tag ]];
-    [viewController4 stringType:[spotType objectAtIndex:[control tag ]]:[control tag ]];
+    [viewController4 stringLatitude:[spotLatitude objectAtIndex:tagid]:tagid];
+    [viewController4 stringLongitude:[spotLongitude objectAtIndex:tagid]:tagid];
+    [viewController4 stringType:[spotType objectAtIndex:tagid]:tagid];
     
     
 }
@@ -409,10 +403,12 @@ static int cnt,tagid;;
     [vicinity removeAllObjects];
     [spotType removeAllObjects];
     [type removeAllObjects];
+    [reference removeAllObjects];
     [mapview removeAnnotations:mapview.annotations];
 NSLog(@"removed objects from array in view did disappear");
     [self.view reloadInputViews];
     	[super viewDidDisappear:animated];
+    NSLog(@"%@",categoryCount);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -435,7 +431,7 @@ NSLog(@"removed objects from array in view did disappear");
         currentIconUrl = [[NSMutableString alloc] init];
         currentType = [[NSMutableString alloc] init];
         currentVicinity = [[NSMutableString alloc] init];
-        
+        currentReference=[[NSMutableString alloc] init];        
     }
     
 }
@@ -444,8 +440,8 @@ NSLog(@"removed objects from array in view did disappear");
     
     
     if ([currentElement isEqualToString:@"name"])
-    { [currentName appendString:string]; } 
-    else if ([currentElement isEqualToString:@"vicinity"])
+    { [currentName appendString:string]; 
+    } else if ([currentElement isEqualToString:@"vicinity"])
     { [currentVicinity appendString:string];
     } else if ([currentElement isEqualToString:@"type"])
     { [currentType appendString:string];
@@ -455,6 +451,8 @@ NSLog(@"removed objects from array in view did disappear");
     { [currentLatitude appendString:string];
     } else if ([currentElement isEqualToString:@"lng"]) 
     { [currentLongitude appendString:string]; 
+    } else if ([currentElement isEqualToString:@"reference"]) 
+    { [currentReference appendString:string]; 
     }
     
 }
@@ -476,11 +474,14 @@ NSLog(@"removed objects from array in view did disappear");
         [longitude addObject:longitudeWithoutSpaces];
         [iconurl addObject:iconUrlWithoutSpaces];
       //  data[index1]=currentTitle;
-       // index1++;
+        NSLog(@"%@",currentReference);
+        index1++;
         
         
     }
     spotName=name;
+    counts=index1;
+    
     spotType=type;
     spotLatitude=latitude;
     spotLongitude=longitude;

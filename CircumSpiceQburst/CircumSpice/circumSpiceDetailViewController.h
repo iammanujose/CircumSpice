@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CircumSpiceXmlParser.h"
 @interface circumSpiceDetailViewController : UIViewController
 {
     IBOutlet UILabel *detailName;
@@ -15,6 +15,7 @@
      IBOutlet UILabel *detailLatitude;
      IBOutlet UILabel *detailLongitude;
      IBOutlet UILabel *detailType;
+    NSMutableArray *parserData;
 }
 
 @property (nonatomic, retain) UILabel *detailName;

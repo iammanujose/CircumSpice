@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32C4580F14C2DB1D00A526DD /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C4580E14C2DB1D00A526DD /* pin.png */; };
+		32C4581414C2DC7900A526DD /* pin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C4581314C2DC7900A526DD /* pin1.png */; };
+		32C4581A14C3168800A526DD /* gpspolice.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C4581914C3168700A526DD /* gpspolice.png */; };
+		32C4582114C33F1300A526DD /* CircumSpiceXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4582014C33F1300A526DD /* CircumSpiceXmlParser.m */; };
 		CEA7B42214BC201C0023D10E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B42114BC201C0023D10E /* UIKit.framework */; };
 		CEA7B42414BC201C0023D10E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B42314BC201C0023D10E /* Foundation.framework */; };
 		CEA7B42614BC201C0023D10E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7B42514BC201C0023D10E /* CoreGraphics.framework */; };
@@ -34,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32C4580E14C2DB1D00A526DD /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		32C4581314C2DC7900A526DD /* pin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin1.png; sourceTree = "<group>"; };
+		32C4581914C3168700A526DD /* gpspolice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gpspolice.png; sourceTree = "<group>"; };
+		32C4581F14C33F1300A526DD /* CircumSpiceXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircumSpiceXmlParser.h; sourceTree = "<group>"; };
+		32C4582014C33F1300A526DD /* CircumSpiceXmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircumSpiceXmlParser.m; sourceTree = "<group>"; };
 		CEA7B41D14BC201C0023D10E /* CircumSpice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircumSpice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA7B42114BC201C0023D10E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA7B42314BC201C0023D10E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,9 +130,11 @@
 			children = (
 				CEA7B43014BC201C0023D10E /* circumSpiceAppDelegate.h */,
 				CEA7B43114BC201C0023D10E /* circumSpiceAppDelegate.m */,
+				32C4581314C2DC7900A526DD /* pin1.png */,
 				CEA7B45014BC252C0023D10E /* circumSpiceMapViewController.h */,
 				CEA7B45114BC252C0023D10E /* circumSpiceMapViewController.m */,
 				CEA7B45214BC252C0023D10E /* circumSpiceMapViewController.xib */,
+				32C4581914C3168700A526DD /* gpspolice.png */,
 				CEA7B45514BC26730023D10E /* circumSpiceListViewController.h */,
 				CEA7B45614BC26730023D10E /* circumSpiceListViewController.m */,
 				CEA7B45714BC26730023D10E /* circumSpiceListViewController.xib */,
@@ -133,6 +144,8 @@
 				CEA7B47114BC63A10023D10E /* circumSpiceDetailViewController.h */,
 				CEA7B47214BC63A20023D10E /* circumSpiceDetailViewController.m */,
 				CEA7B47314BC63A20023D10E /* circumSpiceDetailViewController.xib */,
+				32C4581F14C33F1300A526DD /* CircumSpiceXmlParser.h */,
+				32C4582014C33F1300A526DD /* CircumSpiceXmlParser.m */,
 				CEA7B42814BC201C0023D10E /* Supporting Files */,
 			);
 			path = CircumSpice;
@@ -141,6 +154,7 @@
 		CEA7B42814BC201C0023D10E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				32C4580E14C2DB1D00A526DD /* pin.png */,
 				CEA7B42914BC201C0023D10E /* CircumSpice-Info.plist */,
 				CEA7B44C14BC23E00023D10E /* icon.png */,
 				CEA7B46514BC33900023D10E /* flag.png */,
@@ -219,6 +233,9 @@
 				CEA7B46614BC33900023D10E /* flag.png in Resources */,
 				CEA7B46814BC33A20023D10E /* Flag3Right.png in Resources */,
 				CEA7B47514BC63A20023D10E /* circumSpiceDetailViewController.xib in Resources */,
+				32C4580F14C2DB1D00A526DD /* pin.png in Resources */,
+				32C4581414C2DC7900A526DD /* pin1.png in Resources */,
+				32C4581A14C3168800A526DD /* gpspolice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +252,7 @@
 				CEA7B45814BC26730023D10E /* circumSpiceListViewController.m in Sources */,
 				CEA7B45D14BC27090023D10E /* circumSpiceSettingsViewController.m in Sources */,
 				CEA7B47414BC63A20023D10E /* circumSpiceDetailViewController.m in Sources */,
+				32C4582114C33F1300A526DD /* CircumSpiceXmlParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +356,7 @@
 				CEA7B44B14BC201D0023D10E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

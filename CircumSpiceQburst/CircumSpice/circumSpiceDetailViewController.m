@@ -33,8 +33,12 @@ static int count;
 
 - (void)viewDidLoad
 {
+    parserData =[[NSMutableArray alloc]init];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    CircumSpiceXmlParser *viewController5 = [CircumSpiceXmlParser alloc] ;
+    parserData=[viewController5 xmlparser:@"CnRqAAAAJfLK4-o8qnZnA7J4dafkRDVk3k9qNJz4DAEXQSaEtp_pefwBECGgjUWoPDAeeNfN_NdTKjYIs216B8EJT6Q3Rofx1OYTWzNA7HSHtgza2VKQkMCqPZvwjQDIl5JtyLGf44CjTbUtWQz_UGbJJoxYuBIQm0g8jg5tWMZbiDKUjdsZqhoUqjJ_6KrFj7hi62TXW9jOrRV6zW8"];
+    NSLog(@"hiiii%@",parserData);
 }
 
 - (void)viewDidUnload

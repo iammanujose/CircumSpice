@@ -67,8 +67,8 @@ static NSMutableArray *list, *subtitle,*latitude,*longitude,*type;
     [super viewDidLoad];
     searching = NO;
     letUserSelectRow = YES;
-    NSLog(@"%@",list);
-    NSLog(@"%@",searchNameResult);
+    //NSLog(@"%@",list);
+    //NSLog(@"%@",searchNameResult);
     [self.table reloadData];
     // Do any additional setup after loading the view from its nib.
 }

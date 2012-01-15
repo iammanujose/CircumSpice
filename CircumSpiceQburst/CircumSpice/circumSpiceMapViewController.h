@@ -29,10 +29,12 @@
     NSMutableArray *latitude;
     NSMutableArray *longitude;
     NSMutableArray *iconurl;
+    NSMutableArray *reference;
     IBOutlet UILabel *loadLabel;
     BOOL x;
     int field;
-    
+    NSInteger counts;
+    NSInteger countNumber[10];
     
     
     
@@ -41,7 +43,7 @@
     // we collect and cache each sub-element value, and then save each item to our array. // we use these to track each current item, until it's ready to be added to the "stories" array 
     NSString * currentElement; 
     NSMutableString * currentTitle, * currentDate, * currentSummary, * currentLink; 
-    NSMutableString *currentName,*currentVicinity, *currentType,*currentLongitude, *currentLatitude, *currentIconUrl;
+    NSMutableString *currentName,*currentVicinity, *currentType,*currentLongitude, *currentLatitude, *currentIconUrl, *currentReference;
 }
 //@property (nonatomic,retain) circumSpiceDetailViewController *viewController4;
 @property (nonatomic,retain) IBOutlet MKMapView *mapview;
